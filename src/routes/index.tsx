@@ -1,24 +1,54 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { SiteNav } from "@/components/landing/site-nav";
+import { Hero } from "@/components/landing/hero";
+import { Features } from "@/components/landing/features";
+import { Automation } from "@/components/landing/automation";
+import { MetaProvider } from "@/components/landing/meta-provider";
+import { Chatbots } from "@/components/landing/chatbots";
+import { Marketing } from "@/components/landing/marketing";
+import { Channels } from "@/components/landing/channels";
+import { Results } from "@/components/landing/results";
+import { FinalCta, SiteFooter } from "@/components/landing/final-cta";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Teraxware | Software para agencias de viajes, tour operadores y DMC" },
+      {
+        name: "description",
+        content:
+          "Centraliza reservas, cotizaciones, CRM, WhatsApp, chatbots con IA y marketing en una sola plataforma para empresas turísticas.",
+      },
+      {
+        property: "og:title",
+        content: "Teraxware | Toda tu operación turística en una plataforma",
+      },
+      {
+        property: "og:description",
+        content:
+          "CRM turístico, reservas, cotizaciones inteligentes, automatización con WhatsApp y Meta Tech Provider oficial.",
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background">
+      <SiteNav />
+      <main>
+        <Hero />
+        <Features />
+        <Automation />
+        <MetaProvider />
+        <Chatbots />
+        <Marketing />
+        <Channels />
+        <Results />
+        <FinalCta />
+      </main>
+      <SiteFooter />
     </div>
   );
 }
