@@ -11,8 +11,7 @@ const items = [
 
 export function MetaProvider() {
   return (
-    <section id="meta" className="relative overflow-hidden py-24 sm:py-32">
-      <div className="gradient-brand pointer-events-none absolute inset-0 -z-10" />
+    <section id="meta" className="gradient-brand relative overflow-hidden py-24 sm:py-32">
       <div className="pointer-events-none absolute inset-0 -z-10 opacity-40 [background:radial-gradient(600px_circle_at_20%_10%,white,transparent_60%)]" />
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading

@@ -9,8 +9,7 @@ const kpis = [
 
 export function Results() {
   return (
-    <section id="resultados" className="relative overflow-hidden py-24 sm:py-32">
-      <div className="gradient-brand pointer-events-none absolute inset-0 -z-10" />
+    <section id="resultados" className="gradient-brand relative overflow-hidden py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading tone="dark" title="Resultados para empresas turísticas" />
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
