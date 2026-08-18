@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import dashboard from "@/assets/dashboard-hero.jpg";
 import { Reveal } from "./reveal";
 
@@ -60,6 +61,14 @@ export function SiteFooter() {
           </span>
           <span className="font-bold text-brand-navy">Teraxware</span>
         </div>
+        <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs font-medium text-muted-foreground">
+          <Link to="/terminos" className="transition-colors hover:text-brand-navy">
+            Términos y Condiciones
+          </Link>
+          <Link to="/privacidad" className="transition-colors hover:text-brand-navy">
+            Política de Privacidad y Datos
+          </Link>
+        </nav>
         <p className="text-xs text-muted-foreground">
           © {new Date().getFullYear()} Teraxware · Tecnología para empresas turísticas
         </p>
